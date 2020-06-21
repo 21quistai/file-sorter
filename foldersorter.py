@@ -8,8 +8,8 @@ import os
 import shutil
 import time
 
-
-os.chdir("/Users/21quistai/Downloads")
+directory = "/Users/21quistai/" + raw_input("What folder do you want to sort? ")
+os.chdir(directory)
 CURRENT_DIR = os.getcwd()
 file_dir = ""
 DIRS = ["Audio/", "Images/", "Videos/", "Code/","Zip/", "Other/"]
@@ -58,8 +58,7 @@ def move_files():
 def run():
 	print("Cleaning up Downloads")
 	make_directories()
-	while True:
-		move_files()
+	move_files()
 
 run()
 
